@@ -8,16 +8,15 @@ struct node{
     struct node *prev,*next;
 };
 
-struct node *START = NULL;
+struct node *START;
 
 
 void Print(){
 struct node *p=START;
-while(p->next != NULL){
+while(p != NULL){
     cout<<p->info<<" ";
     p=p->next;
 }
-cout<<"Empty List";
 }
 
 void InsertStart(int data){
@@ -28,18 +27,19 @@ n->prev=NULL;
 if(START==NULL){
     n->next=NULL;
     START=n;
+    return;
 }
 n->next=START;
 START=n;
-
-Print();
 }
 
 
 int main()
 {
+    START = NULL;
     InsertStart(10);
     InsertStart(20);
+    Print();
     //InsertLast(80);
     //InsertLast(90);
     //Print();
