@@ -34,15 +34,35 @@ START=n;
 }
 
 
+void InsertLast(int data){
+struct node *n,*t,*l;
+t=START;
+n=(struct node*)malloc(sizeof(struct node*));
+n->info=data;
+n->next=NULL;
+if(START==NULL){
+    n->prev=NULL;
+    START=n;
+    return;
+}
+
+
+while(t != NULL){
+    l=t;
+    t=t->next;
+}
+n->prev=l;
+l->next=n;
+}
+
 int main()
 {
     START = NULL;
     InsertStart(10);
     InsertStart(20);
+    InsertLast(80);
+    InsertLast(90);
     Print();
-    //InsertLast(80);
-    //InsertLast(90);
-    //Print();
     //DeleteStart();
     //Print();
     //DeleteLast();
