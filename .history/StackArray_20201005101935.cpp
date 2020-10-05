@@ -1,22 +1,27 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
 
-int A[10];
-int top = -1;
+int n;
+scanf("%d", &n);
+int A[n];
 
 void Push(int x)
 {
-    A[++top] = x;
 }
 void Pop()
 {
 }
 void Print()
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < n; i++)
     {
-        cout << A[i];
+        printf("%d", A[i]);
     }
+}
+
+void top()
+{
+    printf("%d", A[n]);
 }
 
 int main()

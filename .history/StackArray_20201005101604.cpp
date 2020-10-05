@@ -1,22 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
+
 using namespace std;
 
-int A[10];
-int top = -1;
+cin >> max;
+int A[max];
 
 void Push(int x)
 {
-    A[++top] = x;
 }
 void Pop()
 {
 }
 void Print()
 {
-    for (int i = 0; i < 10; i++)
-    {
-        cout << A[i];
-    }
+}
+
+void top()
+{
 }
 
 int main()

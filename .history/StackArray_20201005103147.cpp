@@ -6,7 +6,7 @@ int top = -1;
 
 void Push(int x)
 {
-    A[++top] = x;
+    A[++top] = x
 }
 void Pop()
 {
@@ -17,6 +17,11 @@ void Print()
     {
         cout << A[i];
     }
+}
+
+void top()
+{
+    //cout << A[n - 1];
 }
 
 int main()

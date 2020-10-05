@@ -1,22 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int A[10];
-int top = -1;
+int n;
+cin >> n;
+int A[5];
 
 void Push(int x)
 {
-    A[++top] = x;
 }
 void Pop()
 {
 }
 void Print()
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << A[i];
     }
+}
+
+void top()
+{
+    cout << A[4];
 }
 
 int main()
