@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
-
-int A[10];
+int n;
+cin>>n;
+int A[n];
 int top = -1;
 
 void Push(int x)
 {
-
     A[++top] = x;
 }
 void Pop()
