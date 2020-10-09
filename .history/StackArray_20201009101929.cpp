@@ -43,13 +43,6 @@ void Push(struct ArrayStack *s, int x)
     if (!isFull(s))
     {
         s->top++;
-        s->array[s->top] = x;
-    }
-}
-
-void Pop(struct ArrayStack *s)
-{
-    if (!isEmpty(s))
-    {
+        s->array[top] = x;
     }
 }

@@ -21,7 +21,7 @@ struct ArrayStack *createStack(int cap)
 
 int isFull(struct ArrayStack *s)
 {
-    if (s->top == s->capacity - 1)
+    if (s->top = s->capacity - 1)
     {
         return 1;
     }
@@ -30,26 +30,9 @@ int isFull(struct ArrayStack *s)
 
 int isEmpty(struct ArrayStack *s)
 {
-    if (s->top == -1)
+    if (top == -1)
     {
         return 1;
     }
     return 0;
-}
-
-void Push(struct ArrayStack *s, int x)
-{
-
-    if (!isFull(s))
-    {
-        s->top++;
-        s->array[s->top] = x;
-    }
-}
-
-void Pop(struct ArrayStack *s)
-{
-    if (!isEmpty(s))
-    {
-    }
 }
