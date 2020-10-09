@@ -14,5 +14,5 @@ struct ArrayStack *createStack(int cap)
     s = (struct ArrayStack *)malloc(sizeof(struct ArrayStack *));
     s->top = -1;
     s->capacity = cap;
-    s->array = (int *)malloc(sizeof(int) * s->capacity);
+    s->array = (struct ArrayStack *)malloc(sizeof(int) * s->capacity)
 }
