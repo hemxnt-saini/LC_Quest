@@ -62,25 +62,10 @@ int main()
 {
     struct ArrayStack *stack;
     stack = createStack(4);
-    int choice, item;
+    int choice;
     while (1)
     {
         cout << endl
              << "1.Push";
-        cout << endl
-             << "2.Pop";
-        cout << endl
-             << "Enter Choice";
-        cin >> choice;
-
-        switch (choice)
-        {
-        case 1:
-            cout << endl
-                 << "Enter Number";
-            cin >> item;
-            Push(stack, item);
-            break;
-        }
     }
 }

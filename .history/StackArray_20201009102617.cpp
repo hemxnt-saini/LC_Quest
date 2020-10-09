@@ -79,8 +79,6 @@ int main()
             cout << endl
                  << "Enter Number";
             cin >> item;
-            Push(stack, item);
-            break;
         }
     }
 }
