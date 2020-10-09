@@ -47,7 +47,7 @@ void Push(struct ArrayStack *s, int x)
     }
 }
 
-int Pop(struct ArrayStack *s)
+void Pop(struct ArrayStack *s)
 {
     if (!isEmpty(s))
     {
