@@ -58,19 +58,6 @@ int Pop(struct ArrayStack *s)
     }
     return -1;
 }
-
-void Print(struct ArrayStack *s)
-{
-    if (isEmpty(s))
-    {
-        cout << endl
-             << "Empty Stack";
-        return;
-    }
-    cout << endl
-         << "Not Empty Stack";
-}
-
 int main()
 {
     struct ArrayStack *stack;
@@ -85,7 +72,7 @@ int main()
         cout << endl
              << "3.Print";
         cout << endl
-             << "Enter Choice" << endl;
+             << "Enter Choice";
         cin >> choice;
 
         switch (choice)
@@ -102,7 +89,6 @@ int main()
             break;
         case 3:
             cout << endl;
-            Print(stack);
         }
     }
 }

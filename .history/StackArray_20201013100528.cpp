@@ -92,7 +92,7 @@ int main()
         {
         case 1:
             cout << endl
-                 << "Enter Number";
+                 << "Enter Number" << endl;
             cin >> item;
             Push(stack, item);
             break;

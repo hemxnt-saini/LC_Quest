@@ -67,8 +67,13 @@ void Print(struct ArrayStack *s)
              << "Empty Stack";
         return;
     }
-    cout << endl
-         << "Not Empty Stack";
+    for (int i = 0; i < 3; i++)
+    {
+    }>)
+    {
+        cout << endl
+             << s[i];
+    }
 }
 
 int main()
@@ -85,7 +90,7 @@ int main()
         cout << endl
              << "3.Print";
         cout << endl
-             << "Enter Choice" << endl;
+             << "Enter Choice";
         cin >> choice;
 
         switch (choice)

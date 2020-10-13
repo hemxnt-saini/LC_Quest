@@ -85,7 +85,7 @@ int main()
         cout << endl
              << "3.Print";
         cout << endl
-             << "Enter Choice" << endl;
+             << "Enter Choice";
         cin >> choice;
 
         switch (choice)
