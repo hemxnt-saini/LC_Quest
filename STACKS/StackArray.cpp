@@ -69,6 +69,7 @@ void Print(struct ArrayStack *s)
     }
     cout << endl
          << "Not Empty Stack";
+    return;
 }
 
 int main()
@@ -85,7 +86,7 @@ int main()
         cout << endl
              << "3.Print";
         cout << endl
-             << "Enter Choice" << endl;
+             << "Enter Choice";
         cin >> choice;
 
         switch (choice)
@@ -103,6 +104,11 @@ int main()
         case 3:
             cout << endl;
             Print(stack);
+            break;
+        default:
+            cout << endl
+                 << "Unknown";
+            break;
         }
     }
 }
