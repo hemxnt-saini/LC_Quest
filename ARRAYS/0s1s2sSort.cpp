@@ -2,12 +2,6 @@
 #include <algorithm>
 using namespace std;
 
-void SortEl(int A[], int n)
-{
-}
-void Print(int A[], int n)
-{
-}
 int main()
 {
     int n, l;
