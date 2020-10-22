@@ -6,13 +6,11 @@ int main()
     int n;
     cout << "Enter Size of Array: ";
     cin >> n;
-    int A[n];
+    int A[n], B[n];
     for (int i = 0; i < n; i++)
     {
         cin >> A[i];
     }
-
-    int B[n];
     B[0] = A[n - 1];
 
     for (int i = 0; i < n; i++)
