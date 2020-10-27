@@ -8,7 +8,7 @@ int main()
     //U={1,2,3,4,5,6,7}
     //I={5}
 
-    int n, m, b;
+    int n, m, b, count = 0;
     cout << "Enter Size of Array 1: ";
     cin >> n;
     cout << "Enter Size of Array 2: ";
@@ -35,15 +35,15 @@ int main()
         {
             if (A[i] == B[j])
             {
-                B[j] = 0;
+                B[j] = B[j + 1];
+                count = count + 1;
             }
-
-            C[j + n] = B[j];
+            C[j + n - 1] = B[j];
         }
         C[i] = A[i];
     }
 
-    for (int i = 0; i < b; i++)
+    for (int i = 0; i < b - count + 1; i++)
     {
         cout << C[i] << " ";
     }
