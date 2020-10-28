@@ -14,16 +14,16 @@ int main()
         cin >> A[i];
     }
 
-    int meh = 0, msf = INT8_MIN;
+    int max = 0, ans = INT8_MIN;
 
     for (int i = 0; i < n; i++)
     {
-        meh = meh + A[i];
-        if (meh < A[i])
-            meh = A[i];
+        max = max + A[i];
+        if (max < A[i])
+            max = A[i];
 
-        if (msf < meh)
-            msf = meh;
+        if (ans < max)
+            ans = max;
     }
-    cout << "The Sum of Largest Contiguous Subarray is : " << msf << endl;
+    cout << "The Sum of Largest Contiguous Subarray is : " << ans << endl;
 }
