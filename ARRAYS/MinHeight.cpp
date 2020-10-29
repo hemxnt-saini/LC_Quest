@@ -1,26 +1,19 @@
 #include <iostream>
-#include <stack>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int A[6] = {6, 12, 9, 13, 17};
-    int B[6] = {6, 12, 9, 13, 17};
-    stack<int> S;
-    int x;
-
-    for (int i = 0; i < 6; i++)
+    int n, ans;
+    cout << "Enter Size of Array: " << endl;
+    cin >> n;
+    int A[n];
+    for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < 6; j++)
-        {
-            x = A[i] - B[j];
-            S.push(x);
-        }
+        cout << "Enter Element " << i << endl;
+        cin >> A[i];
     }
-
-    while (!S.empty())
-    {
-        cout << S.top() << endl;
-        S.pop();
-    }
+    sort(A, A + n);
+    ans = A[n - 1] - A[0];
+    cout << ans;
 }
