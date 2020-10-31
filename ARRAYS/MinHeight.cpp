@@ -4,9 +4,11 @@ using namespace std;
 
 int main()
 {
-    int n, ans;
+    int n, last, first, ans, k;
     cout << "Enter Size of Array: " << endl;
     cin >> n;
+    cout << "Enter Value of K: " << endl;
+    cin >> k;
     int A[n];
     for (int i = 0; i < n; i++)
     {
@@ -14,6 +16,8 @@ int main()
         cin >> A[i];
     }
     sort(A, A + n);
-    ans = A[n - 1] - A[0];
-    cout << ans;
+    last = A[n - 1] - k;
+    first = A[0] + k;
+    ans = last - first;
+    cout << (ans > 0 ? ans : -ans) << endl;
 }
