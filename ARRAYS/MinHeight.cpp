@@ -18,8 +18,7 @@ int main()
     sort(A, A + n);
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter Element " << i << endl;
-        cin >> A[i];
+        cout << A[i];
     }
     last = A[n - 1] - k;
     first = A[0] + k;
