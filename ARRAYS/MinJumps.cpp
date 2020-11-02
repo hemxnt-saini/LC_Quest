@@ -1,17 +1,31 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int A[11] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-    int end = A[10];
-    int count = 0;
+    int n, count = 1, flag = 0;
+    cout << "Enter Size of Array: " << endl;
+    cin >> n;
+    int A[n];
 
-    for (int i = 1; i < 10; i++)
+    for (int i = 0; i < n; i++)
     {
+        cout << "Enter Element " << i << endl;
+        cin >> A[i];
+    }
+    int end = A[n - 1];
+    for (int i = 1; i < 11; i++)
+    {
+        if (flag != 0)
+        {
+            break;
+        }
+
         while (A[i] == end)
         {
-            cout << count << endl;
+            cout << "Minimum Counts are " << count << endl;
+            flag = flag + 1;
             break;
         }
         count = count + 1;

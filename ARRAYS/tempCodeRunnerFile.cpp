@@ -1,11 +1,2 @@
-void SortEl(int A[], int n)
-// {
-//     sort(A, A + n);
-// }
-// void Print(int A[], int n)
-// {
-//     for (int i = 0; i < n; i++)
-//     {
-//         cout << A[i] << endl;
-//     }
-// }
+ // int A[11] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 90};
+    // int end = A[10];
