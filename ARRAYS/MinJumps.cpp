@@ -4,14 +4,15 @@ using namespace std;
 
 int main()
 {
-    int n, count = 1, flag = 0;
-    cout << "Enter Size of Array: " << endl;
+    int n, t, count = 1, flag = 0;
+
+    // cout << "Enter Size of Array: " << endl;
     cin >> n;
     int A[n];
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter Element " << i << endl;
+        // cout << "Enter Element " << i << endl;
         cin >> A[i];
     }
     int end = A[n - 1];
@@ -24,7 +25,7 @@ int main()
 
         while (A[i] == end)
         {
-            cout << "Minimum Counts are " << count << endl;
+            cout << count << endl;
             flag = flag + 1;
             break;
         }
