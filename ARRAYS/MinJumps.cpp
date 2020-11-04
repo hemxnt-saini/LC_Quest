@@ -15,6 +15,13 @@ int main()
         // cout << "Enter Element " << i << endl;
         cin >> A[i];
     }
+    sort(A, A + n);
+
+    for (int i = 0; i < n; i++)
+    {
+        // cout << "Enter Element " << i << endl;
+        cin >> A[i];
+    }
     int end = A[n - 1];
     for (int i = 1; i < 11; i++)
     {
