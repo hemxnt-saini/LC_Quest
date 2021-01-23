@@ -1,22 +1,21 @@
 #include <iostream>
 using namespace std;
 
-// void Reverse(int *p, int n)
-// {
-//     int start = *p;
-//     int end = *(p + 2 * (n - 1));
+void Reverse(int *A, int n)
+{
 
-//     cout << "p = " << p << endl;
-//     cout << "p + 8 = " << &p + 8 << endl;
-//     cout << "p = " << *p << endl;
-//     cout << "p+8 = " << *(&p + 8) << endl;
-//     cout << "Start" << start << endl;
-//     cout << "End" << end << endl;
+    int start = *A;
+    int end = *(A + n - 1);
 
-//     int temp = start;
-//     start = end;
-//     end = temp;
-// }
+    while (start < end)
+    {
+        int temp = A[start];
+        A[start] = A[end];
+        A[end] = temp;
+        start++;
+        end--;
+    }
+}
 
 int main()
 {
@@ -25,6 +24,8 @@ int main()
     {
         cin >> A[i];
     }
+
+    // Reverse(A, 6);
 
     int start = 0;
     int end = 5;
