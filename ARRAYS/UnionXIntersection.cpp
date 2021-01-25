@@ -1,50 +1,65 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
+int printUnion(int arr1[], int arr2[], int m, int n)
+{
+    int i = 0, j = 0;
+    while (i < m && j < n)
+    {
+        if (arr1[i] < arr2[j])
+            cout << arr1[i++] << " ";
+
+        else if (arr2[j] < arr1[i])
+            cout << arr2[j++] << " ";
+
+        else
+        {
+            cout << arr2[j++] << " ";
+            i++;
+        }
+    }
+
+    while (i < m)
+        cout << arr1[i++] << " ";
+
+    while (j < n)
+        cout << arr2[j++] << " ";
+}
+
+int printIntersection(int arr1[], int arr2[], int m, int n)
+{
+    int i = 0;
+    int j = 0;
+    while (i < m && j < n)
+    {
+        if (arr1[i] < arr2[j])
+        {
+            i++;
+        }
+        else if (arr1[i] > arr2[j])
+        {
+            j++;
+        }
+        else
+        {
+            cout << arr1[i] << " ";
+            i++;
+            j++;
+        }
+    }
+}
 
 int main()
 {
-    //A[5]={1,2,3,4,5}
-    //B[3]={5,6,7}
-    //U={1,2,3,4,5,6,7}
-    //I={5}
+    int arr1[] = {1, 2, 4, 5, 6};
+    int arr2[] = {2, 3, 5, 7};
 
-    int n, m, b, count = 0;
-    cout << "Enter Size of Array 1: ";
-    cin >> n;
-    cout << "Enter Size of Array 2: ";
-    cin >> m;
-    b = n + m;
-    int A[n], B[m], C[b];
+    int m = sizeof(arr1) / sizeof(arr1[0]);
+    int n = sizeof(arr2) / sizeof(arr2[0]);
 
-    cout << "Enter Elements of Array 1:" << endl;
-
-    for (int i = 0; i < n; i++)
-    {
-        cin >> A[i];
-    }
-    cout << "Enter Elements of Array 2:" << endl;
-
-    for (int i = 0; i < m; i++)
-    {
-        cin >> B[i];
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            if (A[i] == B[j])
-            {
-                B[j] = B[j + 1];
-                count = count + 1;
-            }
-            C[j + n - 1] = B[j];
-        }
-        C[i] = A[i];
-    }
-
-    for (int i = 0; i < b - count + 1; i++)
-    {
-        cout << C[i] << " ";
-    }
+    // Function calling
+    printUnion(arr1, arr2, m, n);
+    cout << endl;
+    printIntersection(arr1, arr2, m, n);
+    return 0;
 }
