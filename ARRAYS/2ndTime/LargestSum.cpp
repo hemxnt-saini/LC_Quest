@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 int LargestSum(int A[], int n)
@@ -7,9 +8,14 @@ int LargestSum(int A[], int n)
     int sumFar = 0;
     for (int i = 0; i < n; i++)
     {
-        sumInitial = sumInitial + A[i];
-        if (A[i] <= sumInitial)
+        sumFar = sumFar + A[i];
+        if (sumFar > sumInitial)
         {
+            sumInitial = sumFar;
+        }
+        if (sumFar < 0)
+        {
+            sumFar = 0;
         }
     }
     return sumInitial;
@@ -17,7 +23,7 @@ int LargestSum(int A[], int n)
 
 int main()
 {
-    int A[5] = {1, 2, 3, 2, 5};
-    int ans = LargestSum(A, 5);
+    int A[8] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int ans = LargestSum(A, 8);
     cout << ans << endl;
 }
