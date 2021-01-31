@@ -1,25 +1,29 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int Duplicate(int A[], int n)
+void printRepeating(int arr[], int size)
 {
-    for (int i = 0; i < n; i++)
+    int i;
+    cout << "The repeating elements are:" << endl;
+    for (i = 0; i < size; i++)
     {
-        for (int j = i + 1; j < n; j++)
+        cout << arr[abs(arr[i])] << "first" << endl;
+
+        if (arr[abs(arr[i])] >= 0)
         {
-            if (A[i] == A[j])
-            {
-                return A[i];
-            }
+            cout << arr[abs(arr[i])] << "Second" << endl;
+            arr[abs(arr[i])] = -arr[abs(arr[i])];
+            cout << arr[abs(arr[i])] << "Third" << endl;
         }
+        else
+            cout << abs(arr[i]) << "Answer" << endl;
     }
-    return -1;
 }
 
 int main()
 {
-    int A[] = {3, 3, 5, 1, 5};
-    int n = sizeof(A) / sizeof(A[0]);
-    int ans = Duplicate(A, n);
-    cout << ans;
+    int arr[] = {2, 3, 1, 3, 5};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+    printRepeating(arr, arr_size);
+    return 0;
 }
