@@ -15,18 +15,8 @@ struct node *CreateNode()
     return n;
 }
 
-void InsertFirst(int data)
+void InsertNth(int data, int n)
 {
-    struct node *temp;
-    temp = CreateNode();
-    temp->data = data;
-    temp->link = NULL;
-
-    if (s != NULL)
-    {
-        temp->link = s;
-    }
-    s = temp;
 }
 
 void Print()
@@ -44,10 +34,12 @@ int main()
 {
     for (int i = 0; i < 5; i++)
     {
-        int n;
+        int n, m;
         cout << "Insert the data: ";
         cin >> n;
-        InsertFirst(n);
+        cout << "Inserted at: ";
+        cin >> m;
+        InsertNth(n, m);
         Print();
         cout << endl;
     }
