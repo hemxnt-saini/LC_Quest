@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-struct node *s = NULL;
+struct node *START = NULL;
 struct node
 {
     int data;
@@ -17,30 +17,45 @@ struct node *CreateNode()
 
 void InsertNth(int data, int n)
 {
+    struct node *p = START;
+    struct node *temp = CreateNode();
+    temp->data = data;
+    temp->link = NULL;
+    cout << "TEMP:" << temp << endl;
+    if (n == 1)
+    {
+        temp->link = START;
+        START = temp;
+        cout << "HELLO:" << endl;
+        cout << "TEMP1:DATA-" << temp->data << endl;
+    }
+    else
+    {
+        for (int i = 1; i < n - 1; i++)
+        {
+            p = p->link;
+        }
+        temp->link = p->link;
+        p->link = temp;
+        cout << "TEMP2:DATA-" << temp->data << endl;
+    }
 }
-
 void Print()
 {
-    struct node *loop = s;
+    struct node *p = START;
 
-    while (loop != NULL)
+    while (p != NULL)
     {
-        cout << loop->data << " ";
-        loop = loop->link;
+        cout << p->data << " ";
+        p = p->link;
     }
 }
 
 int main()
 {
-    for (int i = 0; i < 5; i++)
-    {
-        int n, m;
-        cout << "Insert the data: ";
-        cin >> n;
-        cout << "Inserted at: ";
-        cin >> m;
-        InsertNth(n, m);
-        Print();
-        cout << endl;
-    }
+
+    InsertNth(10, 1);
+    InsertNth(50, 4);
+    InsertNth(40, 3);
+    Print();
 }
