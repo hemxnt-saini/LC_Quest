@@ -49,7 +49,17 @@ void Print()
 
 void Reverse()
 {
-    struct node *temp = START;
+    struct node* prev=NULL;
+    struct node* current=START;
+    struct node* next;
+
+    while(current != NULL){
+        next=current->link;
+        current->link=prev;
+        prev=current;
+        current=next;
+    }
+    START=prev;
 }
 
 int main()
