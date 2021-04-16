@@ -8,6 +8,8 @@ int main()
     int n;
     cin >> n;
 
+    // |2U3U5| => |2|+|3|+|5|-|2I3|-|2I5|-|3I5|+|2U3U5|;
+
     int d2 = floor(n / 2);
     int d3 = floor(n / 3);
     int d5 = floor(n / 5);
