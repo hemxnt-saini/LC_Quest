@@ -88,5 +88,5 @@ int main()
     insertAtHead(head, 9);
     print(head);
     cout << endl;
-    cout << kthLast(head, 7);
+    cout << kthLast(head, 2);
 }
