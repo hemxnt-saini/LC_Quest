@@ -34,16 +34,20 @@ int main()
         }
         end_col--;
 
+        if(end_row > start_row){
         for (int i = end_col; i >= start_col; i--)
         {
             cout << a[end_row][i] << " ";
         }
         end_row--;
+        }
 
+        if(end_col > start_col){
         for (int i = end_row; i >= start_row; i--)
         {
             cout << a[i][start_col] << " ";
         }
         start_col++;
+        }
     }
 }
