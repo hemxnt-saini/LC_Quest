@@ -2,21 +2,16 @@
 #include <algorithm>
 using namespace std;
 
-void search(int arr[4][4], int size, int x)
-{
-
-    cout << "Not Found" << endl;
-}
-
 int main()
 {
-    int row, key;
+    int row, col, key;
     cin >> row;
-    int a[row][row];
+    cin >> col;
+    int a[row][col];
 
     for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < row; j++)
+        for (int j = 0; j < col; j++)
         {
             cin >> a[i][j];
         }
