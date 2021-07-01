@@ -67,5 +67,6 @@ int main()
 {
     node *root = buildTree();
     printBFS(root);
+    cout << endl;
     rightView(root);
 }
